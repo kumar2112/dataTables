@@ -24,6 +24,7 @@
  
                 $(document).ready(function() {
                     editor = new $.fn.dataTable.Editor( {
+                        
                         ajax: "inc/jsonlog.php",
                         table: "#example",
                         fields: [   {
@@ -58,8 +59,8 @@
                         processing: true,
                         serverSide: true,
                         ajax: "inc/jsonlog.php",
-                        searching:true,
-                        //paging: false,
+                        stateSave: true,
+                        searchable: true,
                         order: [[ 1, 'asc' ]],
                         columns: [
                                 { data: "table_name" },
